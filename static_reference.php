@@ -20,3 +20,4 @@ class Trucks extends Cars {
 }
 
 Trucks::display();
+Cars::car_detail();
