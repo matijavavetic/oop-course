@@ -14,9 +14,6 @@ class Cars {
         echo $this->door_count;
         echo $this->seat_count;
     }
-
-
-
 }
 
 $bmw = new Cars();
