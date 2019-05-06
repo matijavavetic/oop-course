@@ -8,14 +8,28 @@
         <?php
         include("init.php");
 
+        $users = User::find_all_users();
 
-        $result_set = User::find_all_users();
+        foreach ($users as $user) {
 
-        while($row = mysqli_fetch_array($result_set)) {
-
-            echo $row['username'] . "<br>";
-
+            echo $user->username . "<br>";
         }
+
+        $found_user = User::find_users_by_id(2);
+
+        echo $found_user->username;
+
+
+        /*
+        $found_user = User::find_users_by_id(2);
+
+        $user = User::instantiation($found_user);
+
+        echo $user->username;
+
+        echo "<br>";
+        */
+
 
         /*$found_user = User::find_users_by_id(1);
 
