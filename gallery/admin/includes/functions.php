@@ -21,4 +21,10 @@ function redirect($location) {
         header("Location: {$location}");
 }
 
+function debug($msg) {
+    echo "<pre>";
+    echo $msg;
+    echo "</pre>";
+}
+
 spl_autoload_register('classAutoLoader');

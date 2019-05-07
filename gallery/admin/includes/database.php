@@ -4,7 +4,7 @@ require_once("config.php");
 
 class Database {
 
-    private $connection;
+    public $connection;
 
     function __construct() {
 
@@ -48,6 +48,11 @@ class Database {
     public function the_insert_id() {
 
         return $this->connection->insert_id;
+    }
+
+    public function insertUserID()
+    {
+        return mysqli_insert_id($this->connection);
     }
 }
 

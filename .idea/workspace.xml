@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="de8c2dc8-1899-4430-868b-3c2a5da0dd0e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/admin/includes/admin_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/includes/admin_content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/admin/includes/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/includes/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/admin/includes/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/includes/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/admin/includes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/includes/user.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +16,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gallery/admin/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="510">
               <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gallery/admin/includes/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="134" column="25" lean-forward="true" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gallery/admin/includes/admin_content.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gallery/admin/includes/init.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gallery/admin/includes/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-374">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -61,22 +101,22 @@
         <option value="$PROJECT_DIR$/gallery/admin/includes/side_nav.php" />
         <option value="$PROJECT_DIR$/gallery/admin/includes/config.php" />
         <option value="$PROJECT_DIR$/section2/class_access.php" />
-        <option value="$PROJECT_DIR$/gallery/admin/includes/database.php" />
-        <option value="$PROJECT_DIR$/gallery/admin/includes/admin_content.php" />
         <option value="$PROJECT_DIR$/gallery/admin/includes/Car.php" />
         <option value="$PROJECT_DIR$/gallery/admin/test.php" />
         <option value="$PROJECT_DIR$/gallery/admin/includes/init.php" />
         <option value="$PROJECT_DIR$/gallery/admin/includes/login.php" />
-        <option value="$PROJECT_DIR$/gallery/admin/includes/user.php" />
         <option value="$PROJECT_DIR$/gallery/admin/includes/header.php" />
         <option value="$PROJECT_DIR$/gallery/admin/index.php" />
-        <option value="$PROJECT_DIR$/gallery/admin/includes/functions.php" />
         <option value="$PROJECT_DIR$/gallery/admin/logout.php" />
         <option value="$PROJECT_DIR$/gallery/admin/includes/top_nav.php" />
         <option value="$PROJECT_DIR$/gallery/admin/includes/session.php" />
         <option value="$PROJECT_DIR$/gallery/admin/login.php" />
         <option value="$PROJECT_DIR$/../../php/php.ini.txt" />
         <option value="$PROJECT_DIR$/../../php/php.ini" />
+        <option value="$PROJECT_DIR$/gallery/admin/includes/database.php" />
+        <option value="$PROJECT_DIR$/gallery/admin/includes/functions.php" />
+        <option value="$PROJECT_DIR$/gallery/admin/includes/user.php" />
+        <option value="$PROJECT_DIR$/gallery/admin/includes/admin_content.php" />
       </list>
     </option>
   </component>
@@ -172,18 +212,19 @@
       <workItem from="1556098472703" duration="5863000" />
       <workItem from="1557126370872" duration="15564000" />
       <workItem from="1557145316079" duration="779000" />
-      <workItem from="1557214266138" duration="1709000" />
+      <workItem from="1557214266138" duration="2739000" />
+      <workItem from="1557221808066" duration="4090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34258000" />
+    <option name="totallyTimeSpent" value="39378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="676" y="0" width="697" height="745" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38304552" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3155416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -203,6 +244,27 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3155416" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -232,13 +294,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/constructor_destructor.php" />
-    <entry file="file://$PROJECT_DIR$/../gallery/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../gallery/index.php" />
     <entry file="file://$PROJECT_DIR$/gallery/includes/navigation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -302,20 +358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/admin_content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/admin/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -331,13 +373,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_54-Login-Form-Php.zip/54_login_form.php" />
-    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/admin/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -349,13 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -380,20 +408,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../php/php.ini.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="1643" column="6" selection-start-line="1643" selection-start-column="6" selection-end-line="1643" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../php/php.ini.txt" />
     <entry file="file://$PROJECT_DIR$/../../php/php.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -401,10 +416,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/admin/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="510">
           <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="134" column="25" lean-forward="true" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/admin_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,4 @@
-
+<?php require_once("header.php"); ?>
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -7,34 +7,15 @@
 
         <?php
         include("init.php");
+/*
+        $user = User::find_users_by_id(1);
+        $user->first_name= "Okeeeeee";
 
-        $users = User::find_all_users();
-
-        foreach ($users as $user) {
-
-            echo $user->username . "<br>";
-        }
-
-        $found_user = User::find_users_by_id(2);
-
-        echo $found_user->username;
-
-
-        /*
-        $found_user = User::find_users_by_id(2);
-
-        $user = User::instantiation($found_user);
-
-        echo $user->username;
-
-        echo "<br>";
-        */
-
-
-        /*$found_user = User::find_users_by_id(1);
-
-        echo $found_user['username'];
+        $user->update();
 */
+        $user = User::find_users_by_id(3);
+        $user->delete();
+
         ?>
         <div class="col-lg-12">
             <h1 class="page-header">
