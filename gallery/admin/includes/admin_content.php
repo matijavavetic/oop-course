@@ -7,15 +7,32 @@
 
         <?php
         include("init.php");
+
+        $user = new User();
+
+        $user->username = "radibrt";
+        $user->password = "sd";
+        $user->first_name = "assa";
+        $user->last_name = "ass";
+
+        $user->create();
+
 /*
-        $user = User::find_users_by_id(1);
-        $user->first_name= "Okeeeeee";
+        $user = User::find_users_by_id(4);
+        $user->username = "waitamin";
+        $user->password = "oof";
+        $user->first_name = "yeet";
+        $user->last_name = "spicy";
 
         $user->update();
-*/
-        $user = User::find_users_by_id(3);
-        $user->delete();
+        /*
+                $user = User::find_users_by_id(2);
+                $user->delete();
 
+                $user = User::find_users_by_id(6);
+                $user->password = "Ae";
+                $user->save();
+        */
         ?>
         <div class="col-lg-12">
             <h1 class="page-header">
