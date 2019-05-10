@@ -2,27 +2,28 @@
 
 class Photo extends DatabaseObject
 {
-    protected static $dbTable = "photo";
-    protected static $dbTableFields = array(
-        'photo_id',
+
+    protected static $db_table = "photo";
+    protected static $db_table_fields = array(
+        'id',
         'title',
         'description',
-        'file_name',
+        'filename',
         'type',
         'size'
     );
 
-    public $photoID;
+    public $id;
     public $title;
     public $description;
-    public $fileName;
+    public $filename;
     public $type;
     public $size;
 
-    public $tmpPath;
+    public $tmp_path;
     public $uploadDir = "images";
     public $errors = array();
-    public $uploadErrorsArray = array(
+    public $upload_errors_array = array(
         UPLOAD_ERR_OK => "There is no error",
         UPLOAD_ERR_INI_SIZE => "The uploaded file exceeds the upload_max_filesize",
         UPLOAD_ERR_FORM_SIZE => "The uploaded file exceeds the MAX_FILE_SIZE",
@@ -33,24 +34,19 @@ class Photo extends DatabaseObject
         UPLOAD_ERR_EXTENSION => "A PHP extension stopped the file upload"
     );
 
-    /*
-     * This is passing $_FILES['uploaded_file'] as an argument
-     *
-     * @param string $file file to check
-     *
-     */
+    //This is passing $_FILES['uploaded_file] as an argument
 
     public function setFile($file)
     {
-        if (empty($file) || ! $file || ! is_array($file)) {
+        if(empty($file) || !$file || !is_array($file)) {
             $this->errors[] = "There was no file uploaded here";
             return false;
-        } elseif ($file['error'] != 0) {
-            $this->errors[] = $this->uploadErrorsArray[$file['error']];
+        } elseif($file['error'] != 0) {
+            $this->errors[] = $this->upload_errors_array[$file['error']];
             return false;
         } else {
-            $this->fileName = basename($file['name']);
-            $this->tmpPath = $file['tmp_name'];
+            $this->filename = basename($file['name']);
+            $this->tmp_path = $file['tmp_name'];
             $this->type = $file['type'];
             $this->size = $file['size'];
         }
@@ -58,43 +54,49 @@ class Photo extends DatabaseObject
 
     public function picturePath()
     {
-        return $this->uploadDir.DS.$this->fileName;
+        return $this->uploadDir.DS.$this->filename;
     }
-
-    /*
-     * Checks for any possible errors when photo is being saved
-     */
 
     public function save()
     {
-        if ($this->photoID) {
+        if ($this->id) {
             $this->update();
         } else {
-            if (!empty($this->errors)) {
+            if(!empty($this->errors)) {
                 return false;
             }
 
-            if (empty($this->fileName) || empty($this->tmpPath)) {
+            if (empty($this->filename) || empty($this->tmp_path)) {
                 $this->errors[] = "The file was not available";
                 return false;
             }
 
-            $targetPath = SITE_ROOT . DS . 'admin' . DS . $this->uploadDir . DS . $this->fileName;
+            $target_path = SITE_ROOT . DS . 'admin' . DS . $this->uploadDir . DS . $this->filename;
 
-            if (file_exists($targetPath)) {
-                $this->errors[] = "The file {$this->fileName} already exists.";
+            if (file_exists($target_path)) {
+                $this->errors[] = "The file {$this->filename} already exists.";
                 return false;
             }
 
-            if (move_uploaded_file($this->tmpPath, $targetPath)) {
-                if ($this->create()) {
-                    unset($this->tmpPath);
+            if (move_uploaded_file($this->tmp_path, $target_path)) {
+                if($this->create()) {
+                    unset($this->tmp_path);
                     return true;
                 }
             } else {
                 $this->errors[] = "The file directory probably doesn't have permission.";
                 return false;
             }
+        }
+    }
+
+    public function deletePhoto()
+    {
+        if($this->delete()) {
+            $target_path = SITE_ROOT.DS. 'admin' . DS . $this->picturePath();
+            return unlink($target_path) ? true : false;
+        } else {
+            return false;
         }
     }
 }

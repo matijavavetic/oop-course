@@ -1,6 +1,6 @@
 <?php
 
-include("includes/header.php");
+require_once("includes/header.php");
 
 if(!$session->isUserSingedIn()) {
 

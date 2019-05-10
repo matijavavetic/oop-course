@@ -7,6 +7,7 @@
 
         <?php
         include("init.php");
+
         /*
         $user = new User();
         $user->username = "Matija";
