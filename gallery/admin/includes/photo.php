@@ -87,7 +87,7 @@ class Photo extends DatabaseObject
             }
 
             if (move_uploaded_file($this->tmpPath, $targetPath)) {
-                if($this->create()) {
+                if ($this->create()) {
                     unset($this->tmpPath);
                     return true;
                 }
