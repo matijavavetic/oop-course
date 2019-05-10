@@ -1,28 +1,28 @@
 <?php
 
-class Photo extends DatabaseObject {
-
-    protected static $db_table = "photo";
-    protected static $db_table_fields = array(
+class Photo extends DatabaseObject
+{
+    protected static $dbTable = "photo";
+    protected static $dbTableFields = array(
         'photo_id',
         'title',
         'description',
-        'filename',
+        'file_name',
         'type',
         'size'
     );
 
-    public $photo_id;
+    public $photoID;
     public $title;
     public $description;
-    public $filename;
+    public $fileName;
     public $type;
     public $size;
 
-    public $tmp_path;
+    public $tmpPath;
     public $uploadDir = "images";
     public $errors = array();
-    public $upload_errors_array = array(
+    public $uploadErrorsArray = array(
         UPLOAD_ERR_OK => "There is no error",
         UPLOAD_ERR_INI_SIZE => "The uploaded file exceeds the upload_max_filesize",
         UPLOAD_ERR_FORM_SIZE => "The uploaded file exceeds the MAX_FILE_SIZE",
@@ -33,19 +33,24 @@ class Photo extends DatabaseObject {
         UPLOAD_ERR_EXTENSION => "A PHP extension stopped the file upload"
     );
 
-    // This is passing $_FILES['uploaded_file] as an argument
+    /*
+     * This is passing $_FILES['uploaded_file'] as an argument
+     *
+     * @param string $file file to check
+     *
+     */
 
     public function setFile($file)
     {
-        if(empty($file) || !$file || !is_array($file)) {
+        if (empty($file) || ! $file || ! is_array($file)) {
             $this->errors[] = "There was no file uploaded here";
             return false;
-        } elseif($file['error'] != 0) {
-            $this->errors[] = $this->upload_errors_array[$file['error']];
+        } elseif ($file['error'] != 0) {
+            $this->errors[] = $this->uploadErrorsArray[$file['error']];
             return false;
         } else {
-            $this->filename = basename($file['name']);
-            $this->tmp_path = $file['tmp_name'];
+            $this->fileName = basename($file['name']);
+            $this->tmpPath = $file['tmp_name'];
             $this->type = $file['type'];
             $this->size = $file['size'];
         }
@@ -53,33 +58,37 @@ class Photo extends DatabaseObject {
 
     public function picturePath()
     {
-        return $this->uploadDir.DS.$this->filename;
+        return $this->uploadDir.DS.$this->fileName;
     }
+
+    /*
+     * Checks for any possible errors when photo is being saved
+     */
 
     public function save()
     {
-        if ($this->photo_id) {
+        if ($this->photoID) {
             $this->update();
         } else {
-            if(!empty($this->errors)) {
+            if (!empty($this->errors)) {
                 return false;
             }
 
-            if (empty($this->filename) || empty($this->tmp_path)) {
+            if (empty($this->fileName) || empty($this->tmpPath)) {
                 $this->errors[] = "The file was not available";
                 return false;
             }
 
-            $target_path = SITE_ROOT . DS . 'admin' . DS . $this->uploadDir . DS . $this->filename;
+            $targetPath = SITE_ROOT . DS . 'admin' . DS . $this->uploadDir . DS . $this->fileName;
 
-            if (file_exists($target_path)) {
-                $this->errors[] = "The file {$this->filename} already exists.";
+            if (file_exists($targetPath)) {
+                $this->errors[] = "The file {$this->fileName} already exists.";
                 return false;
             }
 
-            if (move_uploaded_file($this->tmp_path, $target_path)) {
+            if (move_uploaded_file($this->tmpPath, $targetPath)) {
                 if($this->create()) {
-                    unset($this->tmp_path);
+                    unset($this->tmpPath);
                     return true;
                 }
             } else {
