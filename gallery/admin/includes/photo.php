@@ -49,7 +49,6 @@ class Photo extends DatabaseObject {
             $this->type = $file['type'];
             $this->size = $file['size'];
         }
-
     }
 
     public function picturePath()
@@ -66,19 +65,19 @@ class Photo extends DatabaseObject {
                 return false;
             }
 
-            if(empty($this->filename) || empty($this->tmp_path)) {
+            if (empty($this->filename) || empty($this->tmp_path)) {
                 $this->errors[] = "The file was not available";
                 return false;
             }
 
             $target_path = SITE_ROOT . DS . 'admin' . DS . $this->uploadDir . DS . $this->filename;
 
-            if(file_exists($target_path)) {
+            if (file_exists($target_path)) {
                 $this->errors[] = "The file {$this->filename} already exists.";
                 return false;
             }
 
-            if(move_uploaded_file($this->tmp_path, $target_path)) {
+            if (move_uploaded_file($this->tmp_path, $target_path)) {
                 if($this->create()) {
                     unset($this->tmp_path);
                     return true;

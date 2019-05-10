@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de8c2dc8-1899-4430-868b-3c2a5da0dd0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gallery/admin/includes/db_object.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gallery/admin/includes/photo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/admin/includes/admin_content.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/includes/admin_content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/admin/includes/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/includes/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/admin/includes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/includes/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/admin/photos.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/photos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery/admin/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery/admin/includes/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/gallery/admin/includes/photo.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gallery/admin/photos.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -59,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gallery/admin/includes/photo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="284">
+              <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -132,13 +125,13 @@
         <option value="$PROJECT_DIR$/gallery/admin/includes/init.php" />
         <option value="$PROJECT_DIR$/gallery/admin/includes/admin_content.php" />
         <option value="$PROJECT_DIR$/gallery/admin/index.php" />
-        <option value="$PROJECT_DIR$/gallery/admin/includes/photo.php" />
         <option value="$PROJECT_DIR$/gallery/admin/upload.php" />
         <option value="$PROJECT_DIR$/gallery/admin/photos.php" />
+        <option value="$PROJECT_DIR$/gallery/admin/includes/photo.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="745" />
@@ -245,12 +238,12 @@
       <workItem from="1557221808066" duration="4256000" />
       <workItem from="1557307208413" duration="5219000" />
       <workItem from="1557480654398" duration="449000" />
-      <workItem from="1557481233856" duration="7608000" />
+      <workItem from="1557481233856" duration="8224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52820000" />
+    <option name="totallyTimeSpent" value="53436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -487,13 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/photo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/admin/photos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -501,6 +487,13 @@
           <folding>
             <element signature="e#1674#1707#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/admin/includes/photo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="79" column="15" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
         </state>
       </provider>
     </entry>
