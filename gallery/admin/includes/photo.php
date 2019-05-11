@@ -7,16 +7,20 @@ class Photo extends DatabaseObject
     protected static $db_table_fields = array(
         'id',
         'title',
+        'caption',
         'description',
         'filename',
+        'alternate_text',
         'type',
         'size'
     );
 
     public $id;
     public $title;
+    public $caption;
     public $description;
     public $filename;
+    public $alternate_text;
     public $type;
     public $size;
 

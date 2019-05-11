@@ -20,8 +20,7 @@ if(empty($_GET['id'])) {
     }
 }
 
-
-
+$photo->save();
 
 ?>
 
@@ -61,26 +60,34 @@ if(empty($_GET['id'])) {
                         <small>Subheading</small>
                     </h1>
 
-                    <form action="edit_photo.php" method="post">
+                    <form action="" method="post">
                     <div class="col-md-8">
 
                         <div class="form-group">
-                            <input type="text" name="title" class="form-control">
+                            <input type="text" name="title" class="form-control" value="<?php echo $photo->title; ?>">
                         </div>
 
                         <div class="form-group">
+
+                            <a class="thumbnail" href="#"><img src="<?php echo $photo->picturePath(); ?>" alt=""></a>
+
+                        </div>
+
+
+                        <div class="form-group">
                             <label for="caption">Caption</label>
-                            <input type="text" name="caption" class="form-control" value="<?php echo $photo->title?>">
+                            <input type="text" name="caption" class="form-control" value="<?php echo $photo->caption; ?>">
                         </div>
 
                         <div class="form-group">
                             <label for="caption">Alternate text</label>
-                            <input type="text" name="alternate_text" class="form-control">
+                            <input type="text" name="alternate_text" class="form-control" value="<?php echo $photo->alternate_text; ?>">
                         </div>
 
                         <div class="form-group">
                             <label for="caption">Description</label>
-                            <textarea class="form-control" name="description" id="" cols="30" rows="10"></textarea>
+                            <textarea class="form-control" name="description" id="" cols="30" rows="10"><?php echo $photo->description; ?>
+                            </textarea>
                         </div>
                     </div>
 

@@ -10,7 +10,8 @@ class User extends DatabaseObject
         'username',
         'password',
         'first_name',
-        'last_name'
+        'last_name',
+        'user_image'
     );
 
     public $id;
@@ -18,6 +19,18 @@ class User extends DatabaseObject
     public $first_name;
     public $last_name;
     public $password;
+    public $user_image;
+
+    public $tmp_path;
+    public $uploadDir = "images";
+    public $imagePlaceholder = "http://placehold.it/400x400";
+
+
+
+    public function imagePathAndPlaceholder()
+    {
+        return empty($this->user_image) ? $this->imagePlaceholder : $this->uploadDir.DS.$this->user_image;
+    }
 
     public static function VERIFY_USER($username, $password)
     {
@@ -32,6 +45,30 @@ class User extends DatabaseObject
 
         $the_result_array = self::find_by_query($sql);
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
+    }
+
+
+    public function saveUserData()
+    {
+            if (empty($this->user_image) || empty($this->tmp_path)) {
+                $this->errors[] = "The file was not available";
+                return false;
+            }
+
+            $target_path = SITE_ROOT . DS . 'admin' . DS . $this->uploadDir . DS . $this->user_image;
+
+            if (file_exists($target_path)) {
+                $this->errors[] = "The file {$this->user_image} already exists.";
+                return false;
+            }
+
+            if (move_uploaded_file($this->tmp_path, $target_path)) {
+                unset($this->tmp_path);
+                return true;
+            } else {
+                $this->errors[] = "The file directory probably doesn't have permission.";
+                return false;
+            }
     }
 }
 
