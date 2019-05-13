@@ -155,6 +155,16 @@ class DatabaseObject {
         return ($database->connection->affected_rows == 1) ? true : false;
     }
 
+    public static function COUNT_ALL()
+    {
+        global $database;
+        $sql = "SELECT COUNT(*) FROM " . static::$db_table;
+        $result_set = $database->query($sql);
+        $row = mysqli_fetch_array($result_set);
+
+        return array_shift($row);
+    }
+
     public function setFile($file)
     {
         if(empty($file) || !$file || !is_array($file)) {

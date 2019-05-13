@@ -6,12 +6,23 @@ class Session
     private $signedIn = false;
     public $userID;
     public $message;
+    public $count;
 
     function __construct()
     {
         session_start();
         $this->checkLoginStatus();
+        $this->visitorCount();
         $this->check_message();
+    }
+
+    public function visitorCount()
+    {
+        if(isset($_SESSION['count'])) {
+            return $this->count = $_SESSION['count']++;
+        } else {
+            return $_SESSION['count'] = 1;
+        }
     }
 
     private function checkLoginStatus()
