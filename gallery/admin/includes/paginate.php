@@ -15,12 +15,12 @@ class Paginate
 
     public function next()
     {
-        return $this->currentPage++;
+        return $this->currentPage + 1;
     }
 
     public function previous()
     {
-        return $this->currentPage--;
+        return $this->currentPage - 1;
     }
 
     public function pageTotal()
